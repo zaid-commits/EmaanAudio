@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <title>EmaanAudio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#006064',
+                        secondary: '#00ACC1',
+                        accent: '#FFC107',
+                        background: '#E0F7FA',
+                        text: '#263238',
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+        }
+        .video-wrapper video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body class="bg-background text-text font-sans">
+    <!-- Header -->
+    <header class="bg-primary text-white p-4 sticky top-0 z-50">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+            <div class="text-3xl font-bold mb-4 md:mb-0">EmaanAudio</div>
+            <nav>
+                <ul class="flex flex-wrap justify-center space-x-6">
+                    <li><a href="#container" class="hover:text-accent transition duration-300">Home</a></li>
+                    <li><a href="#quran" class="hover:text-accent transition duration-300">Quran</a></li>
+                    <li><a href="#podcasts" class="hover:text-accent transition duration-300">Podcasts</a></li>
+                    <li><a href="#about" class="hover:text-accent transition duration-300">About</a></li>
+                    <li><a href="#contact" class="hover:text-accent transition duration-300">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mx-auto mt-8 p-4">
+        <section class="hero relative overflow-hidden rounded-xl mb-12">
+            <div class="video-wrapper">
+                <video autoplay loop muted playsinline>
+                    <source src="https://assets.mixkit.co/videos/9805/9805-720.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+                <div class="text-center text-white">
+                    <h1 class="text-5xl font-bold mb-4">Discover the Beauty of Quranic Recitations</h1>
+                    <p class="text-xl mb-8">Immerse yourself in the melodious voices of renowned reciters</p>
+                    <a href="#quran" class="bg-accent text-white px-8 py-3 rounded-full hover:bg-opacity-90 transition duration-300 text-lg font-semibold">Start Listening</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Sections -->
+        <section class="mb-12">
+            <h2 class="text-4xl font-bold text-primary mb-8">Featured Content</h2>
+            
+            <!-- Highlighted Reciters -->
+            <div class="mb-12">
+                <h3 class="text-2xl font-semibold mb-6">Highlighted Reciters</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Reciter cards (same as before, but with improved styling) -->
+                    <!-- Example for one card: -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transition duration-300 hover:shadow-xl transform hover:-translate-y-1">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQp3l5hk4gryr5AJ18GPqMfAtt9ArQTMIpYkw&s" alt="Yaseer Al-Dosary" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h4 class="text-xl font-semibold mb-2">Yaseer Al-Dosary</h4>
+                            <p class="mb-4 text-gray-600">Iconic Reciter of all time</p>
+                            <p class="mb-2 text-sm">Known for his melodious voice and precise tajweed</p>
+                            <h5 class="font-semibold mb-2">Top Recitations:</h5>
+                            <ul class="list-disc list-inside text-sm mb-4">
+                                <li>Surah Al-Baqarah</li>
+                                <li>Surah Ar-Rahman</li>
+                                <li>Surah Yasin</li>
+                            </ul>
+                            <a href="#" class="text-secondary hover:underline">Full Profile</a>
+                        </div>
+                    </div>
+                    <!-- Repeat for other reciters -->
+                </div>
+            </div>
+
+            <!-- Featured Podcasts -->
+            <div class="mb-12">
+                <h3 class="text-2xl font-semibold mb-6">Featured Podcasts</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-lg shadow-md p-4">
+                        <img src="https://img.youtube.com/vi/zTkMBR5F5jo/maxresdefault.jpg" alt="The Islamic Mindset" class="w-full rounded-lg mb-2">
+                        <h4 class="text-xl font-semibold mb-2">Abu Bakr Zoud</h4>
+                        <p class="mb-4">Exploring Islamic principles for personal growth</p>
+                        <a href="https://www.youtube.com/watch?v=zTkMBR5F5jo" class="text-secondary hover:underline">Listen Now</a>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md p-4">
+                        <img src="https://img.youtube.com/vi/-Nk0pq593-8/maxresdefault.jpg" alt="A Powerful Dua That Is A Solution To All Your Problems" class="w-full rounded-lg mb-2">
+                        <h4 class="text-xl font-semibold mb-2">Abu Bakr Zoud</h4>
+                        <p class="mb-4">A Powerful Dua That Is A Solution To All Your Problems</p>
+                        <a href="https://www.youtube.com/watch?v=-Nk0pq593-8" class="text-secondary hover:underline">Listen Now</a>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md p-4">
+                        <img src="https://img.youtube.com/vi/KSKOEjDUTl8/maxresdefault.jpg" alt="Islamic Finance Today" class="w-full rounded-lg mb-2">
+                        <h4 class="text-xl font-semibold mb-2">Abu Bakr Zoud</h4>
+                        <p class="mb-4">Building Unshakeable Courage </p>
+                        <a href="https://www.youtube.com/watch?v=KSKOEjDUTl8" class="text-secondary hover:underline">Listen Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quran Recitations Page -->
+        <section id="quran" class="mb-12">
+            <h2 class="text-4xl font-bold text-primary mb-8">Quran Recitations</h2>
+            <div class="mb-6">
+                <input type="text" id="surahSearch" placeholder="Search for a Surah" class="w-full p-3 border border-secondary rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-secondary">
+            </div>
+            <div id="surahList" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Surah cards will be dynamically added here -->
+            </div>
+            <div class="text-center mt-8">
+                <button id="loadMoreSurahs" class="bg-secondary text-white px-6 py-3 rounded-full hover:bg-opacity-90 transition duration-300">Show More</button>
+            </div>
+        </section>
+
+        <section id="about" class="mb-12">
+            <h2 class="text-3xl font-bold text-primary mb-6">About EmaanAudio</h2>
+            <div class="bg-white rounded-lg shadow-md p-6 mb-8">
+                <h3 class="text-2xl font-semibold mb-4">Our Mission</h3>
+                <p class="mb-4">EmaanAudio aims to provide easy access to high-quality Islamic audio content, fostering spiritual growth and understanding in the Muslim community worldwide.</p>
+            </div>
+            <div>
+                <h2 class="text-3xl font-bold text-primary mb-6">Our Team</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    
+                    <div class="bg-white rounded-lg shadow-md p-4">
+                        <img src="https://avatars.githubusercontent.com/u/156203398?v=4" alt="Zaid Rakhange" class="w-full h-48 object-cover mb-4 rounded">
+                        <h4 class="text-xl font-semibold mb-2">Zaid Rakhange</h4>
+                        <p>Owner of EmaanAudio who loves to create great islamic websites and apps</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Page -->
+        <section id="contact" class="mb-12">
+            <h2 class="text-3xl font-bold text-primary mb-6">Contact Us</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-2xl font-semibold mb-4">Get in Touch</h3>
+                    <form id="contactForm">
+                        <div class="mb-4">
+                            <label for="name" class="block mb-2">Name</label>
+                            <input type="text" id="name" name="name" class="w-full p-2 border border-secondary rounded" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="email" class="block mb-2">Email</label>
+                            <input type="email" id="email" name="email" class="w-full p-2 border border-secondary rounded" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="message" class="block mb-2">Message</label>
+                            <textarea id="message" name="message" rows="4" class="w-full p-2 border border-secondary rounded" required></textarea>
+                        </div>
+                        <button type="submit" class="bg-secondary text-white px-4 py-2 rounded hover:bg-opacity-90">Send Message</button>
+                    </form>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-2xl font-semibold mb-4">Contact Information</h3>
+                    <p class="mb-2">Email: info@emaanaudio.com</p>
+                    <p class="mb-2">Phone: +1 (123) 456-7890</p>
+                    <div class="mt-4">
+                        <h4 class="text-xl font-semibold mb-2">Follow Us</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-primary hover:text-accent">Facebook</a>
+                            <a href="#" class="text-primary hover:text-accent">Twitter</a>
+                            <a href="#" class="text-primary hover:text-accent">Instagram</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-primary text-white p-4 mt-12">
+        <div class="container mx-auto text-center">
+            <div class="mb-4">
+                <a href="#" class="mx-2 hover:text-accent">Privacy Policy</a>
+                <a href="#" class="mx-2 hover:text-accent">Terms of Service</a>
+            </div>
+            <div class="mb-4">
+                <a href="#" class="mx-2 hover:text-accent">Facebook</a>
+                <a href="#" class="mx-2 hover:text-accent">Twitter</a>
+                <a href="#" class="mx-2 hover:text-accent">Instagram</a>
+            </div>
+            <div class="mb-2">© 2024 EmaanAudio. All rights reserved.</div>
+            <div>Contact: info@emaanaudio.com</div>
+        </div>
+    </footer>
+<script src="script.js"></script>
+   
+</body>
+</html>
